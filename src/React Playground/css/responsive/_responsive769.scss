@@ -1,0 +1,124 @@
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .loading {
+        img {
+            height: 200px;
+        }
+
+        p {
+            font-size: 50px;
+        }
+    }
+    
+    .home {
+        .logo-holder {
+            img {
+                height: 150px;
+            }
+
+            h1 {
+                font-size: 80px;
+            }
+        }
+    }
+    
+    .number {
+        h2 {
+            font-size: 60px;
+        }
+
+        .number-set {
+            form {
+                input {
+                    width: 200px;
+                    font-size: 30px;
+                }
+
+                button {
+                    font-size: 30px;
+                }
+            }
+
+            .warning-msg {
+                font-size: 20px;
+            }
+        }
+
+        .number-guess {
+            form {
+                input {
+                    width: 300px;
+                    font-size: 35px;
+                }
+
+                button {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    .dice {
+        .player-holder {
+            img {
+                height: 150px;
+                width: 170px;
+                margin-left: -85px;
+                left: 20%;
+            }
+        }
+
+        .game-holder {
+            form {
+                input {
+                    font-size: 30px;
+                }
+
+                button {
+                    font-size: 25px;
+                }
+            }
+
+            .game-start {
+                .banned-info {
+                    strong {
+                        font-size: 30px;
+                    }
+                }
+
+                .game-turn {
+                    font-size: 25px;
+                }
+
+                .game-options {
+                    button {
+                        width: 150px;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .typing {
+        h2 {
+            width: 600px;
+            font-size: 40px;
+        }
+    }
+
+    .drawing {
+        .dashboard {
+            width: 90vw;
+        }
+    }
+
+    .dino {
+        .dino-game {
+            width: 700px;
+        }
+    }
+
+    footer .signature a {
+        border: none;
+    }
+}

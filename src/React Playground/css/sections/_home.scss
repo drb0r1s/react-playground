@@ -1,0 +1,49 @@
+.home {
+    @include flex-center(column, center);
+    min-height: 100vh;
+    user-select: none;
+    pointer-events: none;
+    transition: 500ms;
+    
+    .particle-canvas {
+        position: absolute !important;
+    }
+    
+    .logo-holder {
+        @include flex-center;
+        
+        img {
+            height: 250px;
+            width: auto;
+            margin-bottom: 30px;
+            transition: 500ms;
+            z-index: 20;
+        }
+    
+        h1 {
+            font-size: 100px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 500ms;
+            z-index: 20;
+        }
+    }
+
+    .signature {
+        @include flex-center;
+        
+        p {
+            font-size: set-size(md);
+            margin: 0;
+            transition: 500ms;
+            z-index: 20;
+        }
+
+        img {
+            height: 50px;
+            width: auto;
+            transition: 500ms;
+            z-index: 20;
+        }
+    }
+}

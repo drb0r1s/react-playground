@@ -1,0 +1,301 @@
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .loading {
+        img {
+            height: 80px;
+        }
+
+        p {
+            font-size: 30px;
+            letter-spacing: 0;
+        }
+    }
+    
+    .responsive-menu {
+        width: 70vw;
+
+        a {
+            img {
+                height: 50px;
+            }
+            
+            P {
+                font-size: 20px;
+            }
+        }
+    }
+    
+    .home {
+        .logo-holder {
+            img {
+                height: 50px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+        }
+
+        .signature {
+            img {
+                height: 40px;
+            }
+        }
+    }
+    
+    .number {
+        h2 {
+            font-size: 45px;
+            text-align: center;
+        }
+
+        .number-set {
+            form {
+                @include flex-center(column, center);
+                
+                input {
+                    width: 300px;
+                    font-size: 40px;
+                    margin: 20px 0;
+                }
+
+                button {
+                    font-size: 30px;
+                }
+            }
+
+            .warning-msg {
+                font-size: 20px;
+            }
+        }
+
+        .number-guess {
+            form {
+                input {
+                    width: 300px;
+                    font-size: 40px;
+                    margin: 20px 0;
+                }
+
+                button {
+                    font-size: 40px;
+                }
+            }
+
+            .show-button {
+                font-size: 25px;
+            }
+        }
+    }
+
+    .dice {
+        .dice-modal {
+            width: 300px;
+            margin-left: -150px;
+
+            h3 {
+                font-size: 30px;
+            }
+
+            strong {
+                font-size: 20px;
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .modal-result {
+                .result-p {
+                    font-size: 25px;
+                }
+
+                p {
+                    font-size: 20px;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+        }
+        
+        .player-holder {
+            .player {
+                margin: 20px 0;
+            }
+            
+            img {
+                height: 150px;
+                width: 170px;
+                margin-left: -85px;
+                left: 20%;
+            }
+        }
+
+        .game-holder {
+            form {
+                input {
+                    font-size: 25px;
+                }
+
+                button {
+                    font-size: 25px;
+                }
+            }
+
+            .game-start {
+                .banned-info {
+                    strong {
+                        font-size: 30px;
+                    }
+                }
+
+                .game-turn {
+                    font-size: 20px;
+                    text-align: center;
+                }
+
+                .game-options {
+                    button {
+                        width: 150px;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .typing {
+        h2 {
+            height: 80px;
+            width: 290px;
+            font-size: 30px;
+            border-bottom: 1px solid black;
+        }
+
+        textarea {
+            width: 200px;
+
+            &:hover,
+            &:focus {
+                width: 300px;
+            }
+        }
+    }
+
+    .drawing {
+        overflow: hidden;
+        
+        h2 {
+            font-size: 40px;
+        }
+        
+        .dashboard {
+            width: 90vw;
+            flex-direction: column;
+
+            .option {
+                width: 240px;
+                justify-content: left;
+            }
+
+            button {
+                font-size: 20px;
+                margin: 5px 0;
+            }
+        }
+
+        .download-modal {
+            width: 300px;
+            margin-left: -150px;
+
+            h3 {
+                font-size: 25px;
+            }
+
+            .download {
+                .input-holder {
+                    flex-direction: column;
+
+                    #file-name {
+                        width: 250px;
+                    }
+                }
+            }
+
+            .download-success {
+                strong {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .dino {
+        .dino-heading {
+            img {
+                width: 100px;
+            }
+            
+            h2 {
+                font-size: 80px;
+            }
+        }
+
+        .dino-game {
+            width: 300px;
+
+            .dinoIG {
+                height: 75px;
+                width: 75px;
+                margin-top: -75px;
+                margin-left: -75px;
+                left: 30%;
+            }
+
+            .cactusIG {
+                height: 75px;
+                width: 45px;
+                margin-top: -75px;
+                margin-left: -45px;
+                left: 120%;
+            }
+
+            .game-over {
+                width: 260px;
+                margin-left: -130px;
+
+                .scoreboard strong {
+                    font-size: 20px;
+                    text-align: center;
+                }
+            }
+            
+            p {
+                font-size: 12px;
+                padding: 5px;
+            }
+        }
+    }
+
+    .snake {
+        .snake-heading {
+            h2 {
+                font-size: 80px;
+
+                &::after {
+                    width: 280px;
+                }
+            }
+        }
+
+        .snake-game-over {
+            width: 300px;
+            margin-left: -150px;
+
+            .modal-score p {
+                text-align: center;
+            }
+        }
+    }
+
+    footer .signature a {
+        border: none;
+    }
+}

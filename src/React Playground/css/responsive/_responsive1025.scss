@@ -1,0 +1,55 @@
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .loading {
+        img {
+            height: 250px;
+        }
+        
+        p {
+            font-size: 80px;
+        }
+    }
+    
+    .number {
+        h2 {
+            font-size: 60px;
+        }
+
+        .number-set {
+            form {
+                input {
+                    width: 200px;
+                    font-size: 30px;
+                }
+
+                button {
+                    font-size: 30px;
+                }
+            }
+
+            .warning-msg {
+                font-size: 20px;
+            }
+        }
+
+        .number-guess {
+            form {
+                input {
+                    width: 300px;
+                    font-size: 35px;
+                }
+
+                button {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    .dice {
+        .player-holder {
+            .player {
+                width: 400px;
+            }
+        }
+    }
+}

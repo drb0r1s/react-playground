@@ -1,0 +1,27 @@
+.loading {
+    @include flex-center;
+    flex-wrap: wrap;
+    height: 100vh;
+    user-select: none;
+    pointer-events: none;
+
+    img {
+        height: 300px;
+        width: auto;
+        transition: 300ms;
+        animation: rotating 5s linear infinite;
+
+        @keyframes rotating {
+            0% { transform: rotate(0); }
+            0% { transform: rotate(360deg); }
+            0% { transform: rotate(0); }
+        }
+    }
+
+    p {
+        color: $defDarkGrey;
+        font-size: 100px;
+        text-transform: uppercase;
+        letter-spacing: 20px;
+    }
+}

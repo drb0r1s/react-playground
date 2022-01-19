@@ -1,0 +1,191 @@
+@media screen and (min-width: 1700px) {
+    .home {
+        .logo-holder {
+            img {
+                height: 350px;
+            }
+
+            h1 {
+                font-size: 150px;
+            }
+        }
+    }
+
+    .number {
+        h2 {
+            font-size: 100px;
+        }
+
+        .number-set {
+            form {
+                input {
+                    width: 250px;
+                    font-size: 50px;
+                }
+
+                button {
+                    font-size: 40px;
+                }
+            }
+
+            .warning-msg {
+                font-size: 25px;
+            }
+        }
+
+        .number-guess {
+            form {
+                input {
+                    width: 350px;
+                    font-size: 60px;
+                }
+
+                button {
+                    font-size: 50px;
+                }
+            }
+
+            .show-button {
+                font-size: 30px;
+            }
+
+            .result-msg {
+                font-size: 30px;
+            }
+
+            .show-p {
+                font-size: 150px;
+            }
+        }
+    }
+
+    .dice {
+        .player-holder {
+            .player {
+                width: 500px;
+
+                input {
+                    font-size: 30px;
+                }
+
+                .player-points {
+                    p {
+                        font-size: 30px;
+                    }
+
+                    .point-counter {
+                        font-size: 60px;
+                    }
+                }
+            }
+
+            img {
+                height: 250px;
+            }
+        }
+
+        .game-holder {
+            form {
+                input {
+                    font-size: 30px;
+                }
+
+                .warning-msg {
+                    font-size: 25px;
+                }
+
+                button {
+                    font-size: 25px;
+                }
+            }
+
+            .game-start {
+                .banned-info {
+                    strong {
+                        font-size: 40px;
+                    }
+
+                    img {
+                        height: 100px;
+                    }
+                }
+
+                .game-turn {
+                    font-size: 30px;
+                }
+
+                .game-options {
+                    button {
+                        width: 200px;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .typing {
+        h2 {
+            width: 970px;
+            font-size: 70px;
+        }
+
+        p {
+            font-size: 25px;
+        }
+
+        textarea {
+            font-size: 25px;
+
+            &:hover {
+                width: 800px;
+            }
+
+            &:focus {
+                width: 800px;
+            }
+        }
+
+        .wpm-p {
+            font-size: 40px;
+        }
+
+        button {
+            font-size: 25px;
+        }
+    }
+
+    .drawing {
+        .dashboard {
+            width: 80vw;
+        }
+    }
+
+    .dino {
+        .dino-heading {
+            img {
+                width: 200px;
+            }
+
+            h2 {
+                font-size: 200px;
+            }
+        }
+        
+        .dino-game {
+            width: 1500px;
+        }
+    }
+
+    .snake {
+        .snake-heading {
+            h2 {
+                font-size: 200px;
+
+                &::after {
+                    width: 650px;
+                }
+            }
+        }
+    }
+}

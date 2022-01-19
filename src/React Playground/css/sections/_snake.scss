@@ -1,0 +1,186 @@
+.snake {
+    @include flex-center(column, center);
+    min-height: 100vh;
+    background: $defSnakeBg;
+    position: relative;
+
+    .snake-heading {
+        @include flex-center(column, center);
+        position: relative;
+        top: 0;
+        transition: 500ms;
+        
+        h2 {
+            @include default-heading;
+            font-size: 150px;
+            cursor: pointer;
+            user-select: none;
+            transition: 500ms;
+
+            &:hover {
+                text-shadow: $defLimeNeonShadow;
+            }
+    
+            &::after {
+                content: "";
+                display: block;
+                height: 10px;
+                width: 500px;
+                background: white;
+                box-shadow: 5px 5px 15px 5px $defLime;
+                position: absolute;
+                top: 100%;
+                transition: 300ms;
+            }
+
+            &:hover::after {
+                top: 0;
+            }
+        }
+    }
+
+    .snake-game-over {
+        @include flex-center(column, center);
+        height: 300px;
+        width: 500px;
+        background: white;
+        border: 3px dashed $defLime;
+        border-radius: 20px;
+        box-shadow: $defShadow;
+        user-select: none;
+        margin-top: -150px;
+        margin-left: -250px;
+        opacity: 0;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transition: 500ms;
+        z-index: 10;
+
+        &:hover {
+            box-shadow: $defStrongShadow;
+        }
+
+        h3 {
+            color: $defLime;
+            font-size: set-size(xxl);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .modal-score {
+            @include flex-center(column, center);
+            margin: 10px 0;
+
+            p {
+                color: $defLime;
+                font-size: set-size(lg);
+                text-transform: uppercase;
+                letter-spacing: 3px;
+
+                span {
+                    color: white;
+                    background: $defLime;
+                    padding: 3px;
+                }
+            }
+        }
+
+        button {
+            color: white;
+            font-size: set-size(md);
+            text-transform: capitalize;
+            background: $defLime;
+            border: 1px solid white;
+            cursor: pointer;
+            position: relative;
+            top: 0;
+            margin: 10px 0;
+            padding: 5px 10px;
+            transition: 300ms;
+
+            &:hover {
+                color: $defLime;
+                background: white;
+                border: 1px solid $defLime;
+                top: -5px;
+                box-shadow: $defShadow;
+            }
+        }
+    }
+    
+    .snake-game {
+        @include flex-center(column, center);
+        opacity: 0;
+        position: relative;
+        top: -10px;
+        transition: 500ms;
+
+        #snake-canvas {
+            background: white;
+            border: 10px dotted $defLime;
+            box-shadow: $defShadow;
+            position: relative;
+            top: 0;
+            margin: 10px 0;
+            transition: 300ms;
+
+            &:hover {
+                box-shadow: $defStrongShadow;
+                top: -5px;
+            }
+        }
+
+        .scoreboard {
+            @include flex-center;
+            width: 300px;
+            background: white;
+            border: 3px solid $defLime;
+            box-shadow: $defLightShadow;
+            user-select: none;
+            position: relative;
+            top: 0;
+            margin: 20px 0;
+            padding: 10px 0;
+            transition: 300ms;
+
+            &:hover {
+                box-shadow: $defShadow;
+                top: -5px;
+            }
+
+            strong {
+                color: $defLightLime;
+                font-size: 50px;
+                border: 1px solid transparent;
+                position: relative;
+                top: 0;
+                margin: 0 20px;
+                transition: 300ms;
+
+                &:hover {
+                    top: -5px;
+                    border: 1px solid $defLightLime;
+                    box-shadow: $defShadow;
+                }
+
+                &:last-child {
+                    color: $defLime;
+
+                    &:hover {
+                        border: 1px solid $defLime;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.snake-canvas-canceled {
+    box-shadow: none !important;
+
+    &:hover {
+        box-shadow: none !important;
+        top: 0 !important;
+    }
+}

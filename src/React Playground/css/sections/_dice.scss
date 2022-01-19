@@ -1,0 +1,288 @@
+.dice {
+    @include flex-center(column, center);
+    min-height: 800px;
+    background: $defDiceBg;
+    border-bottom: 5px dashed white;
+
+    .dice-modal {
+        @include flex-center(column, center);
+        height: 400px;
+        width: 600px;
+        background: white;
+        border: 5px dashed $defRed;
+        border-radius: 20px;
+        box-shadow: $defShadow;
+        opacity: 0;
+        margin-top: -200px;
+        margin-left: -300px;
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transition: 500ms;
+        z-index: 30;
+
+        img {
+            @include modal-x;
+        }
+        
+        h3 {
+            color: $defDarkGrey;
+            font-size: set-size(xxxl);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        strong {
+            color: $defDarkGrey;
+            font-size: set-size(xxl);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .modal-result {
+            @include flex-center(column, center);
+            
+            .result-p {
+                color: $defDarkGrey;
+                font-size: set-size(xl);
+                text-transform: uppercase;
+                letter-spacing: 3px;
+            }
+
+            p {
+                @extend .result-p;
+                font-size: set-size(lg);
+            }
+        }
+        
+        span {
+            color: $defRed;
+            font-weight: bold;
+        }
+    }
+    
+    .player-holder {
+        @include flex-center;
+        position: relative;
+
+        .player {
+            @include flex-center(column, center);
+            width: 450px;
+            background: white;
+            border: 3px dashed $defRed;
+            border-radius: 20px;
+            box-shadow: $defLightShadow;
+            position: relative;
+            top: 0;
+            margin: 0 20px;
+            padding: 10px 15px;
+            transition: 300ms;
+
+            &:hover {
+                top: -5px;
+                box-shadow: $defShadow;
+            }
+
+            input {
+                color: $defDarkGrey;
+                font-size: set-size(lg);
+                text-align: center;
+                background: transparent;
+                border: 1px solid transparent;
+                border-bottom: 1px solid $defDarkGrey;
+                outline: none;
+                position: relative;
+                top: 0;
+                margin: 20px 0;
+                padding: 5px 10px;
+                transition: 300ms;
+
+                &:hover {
+                    border: 1px solid $defDarkGrey;
+                    top: -5px;
+                    box-shadow: $defShadow;
+                }
+
+                &:focus {
+                    border: 1px solid $defDarkGrey;
+                    top: -5px;
+                    box-shadow: $defShadow;
+                }
+                
+                &::placeholder {
+                    color: $defGrey;
+                    text-align: center;
+                }
+            }
+
+            .player-points {
+                @include flex-center(column, center);
+
+                p {
+                    color: $defDarkGrey;
+                    font-size: set-size(md);
+                    text-transform: uppercase;
+                    letter-spacing: 5px;
+                }
+
+                .point-counter {
+                    color: $defRed;
+                    font-size: set-size(xxxl);
+                }
+            }
+        }
+
+        img {
+            height: 200px;
+            width: auto;
+            filter: $defDropShadow;
+            position: absolute;
+            transition: 500ms;
+        }
+    }
+
+    .game-holder {
+        margin-top: 30px;
+        
+        form {
+            @include flex-center(column, center);
+            position: relative;
+            top: 0;
+            transition: 500ms;
+            
+            input {
+                color: white;
+                font-size: set-size(lg);
+                text-align: center;
+                background: transparent;
+                border: 1px solid transparent;
+                border-bottom: 1px solid white;
+                outline: none;
+                position: relative;
+                top: 0;
+                margin: 5px 0;
+                padding: 5px 10px;
+                transition: 300ms;
+            
+                &:hover {
+                    border: 1px solid white;
+                }
+    
+                &:focus {
+                    border: 1px dashed white;
+                    top: -5px;
+                    box-shadow: $defShadow;
+                }
+    
+                &::placeholder {
+                    color: white;
+                    text-align: center;
+                }
+            }
+
+            .warning-msg {
+                @include warning-msg;
+                font-size: set-size(md);
+                top: -5px;
+                margin: 5px 0;
+            }
+            
+            button {
+                color: white;
+                font-size: set-size(md);
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                background: transparent;
+                border: 1px solid white;
+                cursor: pointer;
+                position: relative;
+                top: 30px;
+                padding: 5px 10px;
+                transition: 300ms;
+        
+                &:hover {
+                    color: $defRed;
+                    background: white;
+                    border: 1px solid red;
+                    top: 20px;
+                    box-shadow: $defShadow;
+                }
+            }
+        }
+
+        .game-start {
+            @include flex-center(column, center);
+            opacity: 0;
+            position: relative;
+            top: -10px;
+            transition: 500ms;
+
+            .banned-info {
+                @include flex-center;
+
+                strong {
+                    color: white;
+                    font-size: set-size(lg);
+                    text-transform: capitalize;
+                    letter-spacing: 5px;
+                }
+
+                img {
+                    height: 75px;
+                    width: auto;
+                    filter: $defDropShadow;
+                }
+            }
+
+            .game-turn {
+                color: white;
+                font-size: set-size(md);
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+
+            .game-options {
+                @include flex-center;
+                
+                button {
+                    width: 120px;
+                    color: white;
+                    font-size: set-size(md);
+                    text-transform: uppercase;
+                    background: transparent;
+                    border: 1px solid white;
+                    cursor: pointer;
+                    position: relative;
+                    top: 0;
+                    margin: 5px;
+                    padding: 5px 10px;
+                    transition: 300ms;
+
+                    &:hover {
+                        color: $defRed;
+                        background: white;
+                        top: -5px;
+                        box-shadow: $defShadow;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#disabled-button {
+    cursor: default;
+    opacity: 0.5;
+
+    &:hover {
+        color: white;
+        background: transparent;
+        top: 0;
+        box-shadow: 0px 0px 0px 0px #000000;
+    }
+}
+
+#current-turn {
+    top: -15px;
+    box-shadow: $defWhiteShadow;
+}

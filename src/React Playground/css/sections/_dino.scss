@@ -1,0 +1,253 @@
+.dino {
+    @include flex-center(column, center);
+    min-height: 100vh;
+    background: $defDinoBg;
+    border-bottom: 5px dashed white;
+
+    .dino-heading {
+        @include flex-center;
+        cursor: pointer;
+        user-select: none;
+        
+        img {
+            height: auto;
+            width: 150px;
+            filter: invert(1);
+            position: relative;
+            top: 0;
+            transition: 300ms;
+        }
+
+        &:hover img {
+            filter: invert(0) $defDropShadow;
+        }
+
+        h2 {
+            @include default-heading;
+            color: black;
+            font-size: 150px;
+            text-shadow: 0px 5px 2px rgba(0, 0, 0, 0);
+            position: relative;
+            top: 0;
+            transition: 500ms;
+        }
+
+        &:hover h2 {
+            color: white;
+            text-shadow: 0px 5px 2px #000000;
+        }
+    }
+
+    .dino-game {
+        height: 400px;
+        width: 1000px;
+        background: white;
+        border: 10px dashed black;
+        border-bottom: 10px solid black;
+        box-shadow: $defSpecialWhiteShadow;
+        overflow: hidden;
+        user-select: none;
+        opacity: 0;
+        position: relative;
+        top: -10px;
+        transition: 500ms;
+
+        &:hover {
+            box-shadow: $defStrongSpecialWhiteShadow;
+            top: -20px;
+        }
+
+        .game-over {
+            @include flex-center(column, center);
+            height: 300px;
+            width: 500px;
+            background: white;
+            border: 3px dashed black;
+            border-radius: 20px;
+            box-shadow: $defShadow;
+            margin-top: -150px;
+            margin-left: -250px;
+            opacity: 0;
+            position: relative;
+            top: 40%;
+            left: 50%;
+            transition: 500ms;
+            z-index: 10;
+
+            &:hover {
+                box-shadow: $defStrongShadow;
+                top: 45%;
+            }
+
+            h3 {
+                color: black;
+                font-size: set-size(xxl);
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+
+            .scoreboard {
+                @include flex-center(column, center);
+                margin: 15px 0;
+
+                strong {
+                    color: black;
+                    font-size: set-size(lg);
+                    text-transform: uppercase;
+                    letter-spacing: 5px;
+
+                    span {
+                        color: white;
+                        background: black;
+                        padding: 3px;
+                    }
+                }
+            }
+
+            button {
+                color: white;
+                font-size: set-size(md);
+                text-transform: capitalize;
+                background: black;
+                border: 2px dashed white;
+                cursor: pointer;
+                position: relative;
+                top: 0;
+                margin: 10px 0;
+                padding: 5px 10px;
+                transition: 300ms;
+
+                &:hover {
+                    color: black;
+                    background: transparent;
+                    border: 2px solid black;
+                    top: -5px;
+                    box-shadow: $defShadow;
+                }
+            }
+        }
+
+        p {
+            color: black;
+            font-size: set-size(md);
+            text-transform: capitalize;
+            letter-spacing: 3px;
+            opacity: 0;
+            position: relative;
+            top: -10px;
+            transition: 300ms;
+
+            span {
+                color: white;
+                text-transform: uppercase;
+                background: black;
+                padding: 3px;
+            }
+        }
+        
+        img {
+            pointer-events: none;
+        }
+
+        .dinoIG {
+            height: 100px;
+            width: 100px;
+            filter: invert(1);
+            margin-top: -100px;
+            margin-left: -100px;
+            position: absolute;
+            top: 100%;
+            left: 20%;
+            transition: 300ms;
+        }
+
+        .cactusIG {
+            height: 100px;
+            width: 60px;
+            filter: invert(1);
+            margin-top: -100px;
+            margin-left: -60px;
+            position: absolute;
+            top: 100%;
+            left: 110%;
+            transition: 300ms;
+        }
+
+        .dino-score {
+            @include flex-center;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            strong {
+                color: black;
+                font-size: set-size(md);
+                letter-spacing: 5px;
+                margin: 0 20px;
+            }
+        }
+    }
+}
+
+#rotating-dino {
+    filter: invert(0);
+    cursor: default;
+    filter: invert(0) $defDropShadow;
+    margin-left: -75px;
+    left: 50%;
+    animation: rotating 1s infinite;
+
+    @keyframes rotating {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+#dino-jump {
+    animation: jump 500ms linear forwards;
+
+    @keyframes jump {
+        0% {
+            top: 100%;
+        }
+
+        20% {
+            top: 60%;
+        }
+
+        50% {
+            top: 30%;
+        }
+
+        70% {
+            top: 60%;
+        }
+
+        100% {
+            top: 100%;
+        }
+    }
+}
+
+@keyframes cactusMove {
+    0% {
+        left: 110%;
+    }
+
+    100% {
+        left: -10%;
+    }
+}
+
+#dino-game-over {
+    box-shadow: $defShadow;
+
+    &:hover {
+        top: 0;
+    }
+}

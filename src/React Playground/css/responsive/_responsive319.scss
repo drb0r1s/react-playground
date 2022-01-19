@@ -1,0 +1,329 @@
+@media screen and (max-width: 319px) {
+    .loading {
+        img {
+            height: 50px;
+        }
+
+        p {
+            font-size: 25px;
+            letter-spacing: 0;
+        }
+    }
+    
+    .responsive-menu {
+        width: 70vw;
+
+        a {
+            img {
+                height: 35px;
+            }
+            
+            P {
+                font-size: 15px;
+            }
+        }
+    }
+    
+    .home {
+        .logo-holder {
+            img {
+                height: 50px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+
+        .signature {
+            img {
+                height: 40px;
+            }
+        }
+    }
+    
+    .number {
+        h2 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .number-set {
+            form {
+                @include flex-center(column, center);
+                
+                input {
+                    width: 200px;
+                    font-size: 35px;
+                    margin: 20px 0;
+                }
+
+                button {
+                    font-size: 30px;
+                }
+            }
+
+            .warning-msg {
+                font-size: 15px;
+            }
+        }
+
+        .number-guess {
+            form {
+                input {
+                    width: 200px;
+                    font-size: 35px;
+                    margin: 20px 0;
+                }
+
+                button {
+                    font-size: 40px;
+                }
+            }
+
+            .show-button {
+                font-size: 25px;
+            }
+        }
+    }
+
+    .dice {
+        .dice-modal {
+            width: 240px;
+            margin-left: -120px;
+
+            h3 {
+                font-size: 30px;
+            }
+
+            strong {
+                font-size: 20px;
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .modal-result {
+                .result-p {
+                    font-size: 25px;
+                }
+
+                p {
+                    font-size: 16px;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+        }
+        
+        .player-holder {
+            .player {
+                width: 240px;
+                margin: 25px 0;
+
+                input {
+                    width: 230px;
+                    font-size: 20px;
+                }
+            }
+            
+            img {
+                height: 150px;
+                width: 170px;
+                margin-left: -85px;
+                left: 30%;
+            }
+        }
+
+        .game-holder {
+            form {
+                input {
+                    font-size: 20px;
+                }
+
+                button {
+                    font-size: 20px;
+                }
+            }
+
+            .game-start {
+                .banned-info {
+                    flex-direction: column;
+                    
+                    strong {
+                        font-size: 20px;
+                    }
+                }
+
+                .game-turn {
+                    width: 240px;
+                    font-size: 20px;
+                    text-align: center;
+                    overflow-wrap: break-word;
+                }
+
+                .game-options {
+                    flex-direction: column;
+                    
+                    button {
+                        width: 150px;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .typing {
+        h2 {
+            height: 70px;
+            width: 240px;
+            font-size: 25px;
+            border-bottom: 1px solid black;
+        }
+
+        textarea {
+            width: 180px;
+
+            &:hover,
+            &:focus {
+                width: 240px;
+            }
+        }
+    }
+
+    .drawing {
+        overflow: hidden;
+        
+        h2 {
+            font-size: 25px;
+        }
+        
+        .dashboard {
+            width: 90vw;
+            flex-direction: column;
+
+            .option {
+                flex-direction: column;
+            }
+
+            button {
+                font-size: 20px;
+                margin: 5px 0;
+            }
+        }
+
+        .download-modal {
+            width: 240px;
+            margin-left: -120px;
+
+            h3 {
+                font-size: 18px;
+            }
+
+            .download {
+                .input-holder {
+                    flex-direction: column;
+
+                    #file-name {
+                        width: 220px;
+                    }
+                }
+            }
+
+            .download-success {
+                strong {
+                    font-size: 20px;
+                    text-align: center;
+                }
+
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .dino {
+        .dino-heading {
+            img {
+                width: 80px;
+            }
+            
+            h2 {
+                font-size: 50px;
+            }
+        }
+
+        .dino-game {
+            width: 240px;
+
+            .dinoIG {
+                height: 50px;
+                width: 50px;
+                margin-top: -50px;
+                margin-left: -50px;
+                left: 30%;
+            }
+
+            .cactusIG {
+                height: 50px;
+                width: 30px;
+                margin-top: -50px;
+                margin-left: -30px;
+                left: 120%;
+            }
+
+            .game-over {
+                width: 220px;
+                margin-left: -110px;
+
+                h3 {
+                    text-align: center;
+                }
+
+                .scoreboard strong {
+                    font-size: 20px;
+                    text-align: center;
+                }
+            }
+            
+            p {
+                font-size: 12px;
+                padding: 5px;
+            }
+        }
+    }
+
+    .snake {
+        .snake-heading {
+            h2 {
+                font-size: 60px;
+
+                &::after {
+                    width: 210px;
+                }
+            }
+        }
+
+        .snake-game-over {
+            width: 240px;
+            margin-left: -120px;
+
+            h3 {
+                text-align: center;
+            }
+
+            .modal-score p {
+                text-align: center;
+            }
+        }
+    }
+
+    footer .logo-holder p {
+        font-size: 20px;
+    }
+    
+    footer .signature a {
+        border: none;
+    }
+}

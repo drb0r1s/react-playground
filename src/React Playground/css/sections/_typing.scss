@@ -1,0 +1,120 @@
+.typing {
+    @include flex-center(column, center);
+    min-height: 100vh;
+    background: $defTypingBg;
+    border-bottom: 5px dashed white;
+
+    h2 {
+        @include default-heading;
+        width: 730px;
+        color: black;
+        border-bottom: 3px solid black;
+        text-shadow: 2px 2px 2px #ffffff;
+
+        &::after {
+            content: "|";
+            animation: blinking 1s infinite;
+        }
+
+        @keyframes blinking {
+            0% { opacity: 1 }
+            50% { opacity: 0 }
+            100% { opacity: 1 }
+        }
+    }
+
+    p {
+        color: black;
+        font-size: set-size(md);
+        text-align: center;
+        text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
+        transition: 300ms;
+    }
+
+    textarea {
+        width: 500px;
+        color: $defYellow;
+        font-size: set-size(md);
+        text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        border: 3px dashed white;
+        resize: none;
+        outline: none;
+        position: relative;
+        top: 0;
+        margin: 20px 0;
+        padding: 5px 10px;
+        transition: 300ms;
+
+        &:hover {
+            width: 600px;
+            top: -10px;
+            box-shadow: $defLightShadow;
+        }
+
+        &:focus {
+            width: 600px;
+            border: 3px solid white;
+            top: -20px;
+            box-shadow: $defShadow;
+        }
+    }
+
+    .wpm-p {
+        color: $defYellow;
+        font-size: set-size(xxl);
+        text-transform: uppercase;
+        background: white;
+        border: 3px dashed $defYellow;
+        box-shadow: $defLightShadow;
+        cursor: default;
+        user-select: none;
+        opacity: 0;
+        position: relative;
+        top: 10px;
+        margin: 5px 0;
+        padding: 5px 10px;
+        transition: 500ms;
+
+        &:hover {
+            border: 3px solid $defYellow;
+            box-shadow: $defShadow;
+            top: -5px !important;
+        }
+    }
+
+    button {
+        color: black;
+        font-size: set-size(md);
+        text-transform: capitalize;
+        letter-spacing: 3px;
+        background: transparent;
+        border: 1px solid transparent;
+        cursor: pointer;
+        opacity: 0;
+        position: relative;
+        top: -10px;
+        margin: 10px 0;
+        padding: 5px 10px;
+        transition: 300ms;
+
+        &:hover {
+            color: $defYellow;
+            background: black;
+            border: 1px solid $defYellow;
+            top: -5px !important;
+            box-shadow: $defShadow;
+        }
+    }
+}
+
+span {
+    color: red;
+    font-weight: bold;
+}
+
+#wpm-final {
+    color: white;
+    background: $defYellow;
+    border: 3px solid white;
+}

@@ -1,0 +1,196 @@
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .loading {
+        img {
+            height: 100px;
+        }
+
+        p {
+            font-size: 40px;
+            letter-spacing: 10px;
+        }
+    }
+    
+    .responsive-menu {
+        width: 70vw;
+    }
+    
+    .home {
+        .logo-holder {
+            img {
+                height: 100px;
+            }
+
+            h1 {
+                font-size: 50px;
+            }
+        }
+    }
+    
+    .number {
+        h2 {
+            font-size: 40px;
+        }
+
+        .number-set {
+            form {
+                @include flex-center(column, center);
+                
+                input {
+                    width: 300px;
+                    font-size: 40px;
+                    margin: 20px 0;
+                }
+
+                button {
+                    font-size: 30px;
+                }
+            }
+
+            .warning-msg {
+                font-size: 20px;
+            }
+        }
+
+        .number-guess {
+            form {
+                input {
+                    width: 300px;
+                    font-size: 40px;
+                    margin: 20px 0;
+                }
+
+                button {
+                    font-size: 40px;
+                }
+            }
+
+            .show-button {
+                font-size: 25px;
+            }
+        }
+    }
+
+    .dice {
+        .dice-modal {
+            width: 450px;
+            margin-left: -225px;
+
+            strong {
+                text-align: center;
+            }
+        }
+        
+        .player-holder {
+            img {
+                height: 150px;
+                width: 170px;
+                margin-left: -85px;
+                left: 20%;
+            }
+        }
+
+        .game-holder {
+            form {
+                input {
+                    font-size: 30px;
+                }
+
+                button {
+                    font-size: 25px;
+                }
+            }
+
+            .game-start {
+                .banned-info {
+                    strong {
+                        font-size: 30px;
+                    }
+                }
+
+                .game-turn {
+                    font-size: 25px;
+                }
+
+                .game-options {
+                    button {
+                        width: 150px;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .typing {
+        h2 {
+            width: 400px;
+            font-size: 23px;
+        }
+
+        textarea {
+            width: 300px;
+
+            &:hover,
+            &:focus {
+                width: 400px;
+            }
+        }
+    }
+
+    .drawing {
+        .dashboard {
+            width: 90vw;
+        }
+
+        .download-modal {
+            width: 450px;
+            margin-left: -225px;
+        }
+    }
+
+    .dino {
+        .dino-heading {
+            h2 {
+                font-size: 120px;
+            }
+        }
+
+        .dino-game {
+            width: 450px;
+
+            .dinoIG {
+                left: 30%;
+            }
+
+            .game-over {
+                width: 420px;
+                margin-left: -210px;
+            }
+            
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .snake {
+        .snake-heading {
+            h2 {
+                font-size: 120px;
+
+                &::after {
+                    width: 400px;
+                }
+            }
+        }
+
+        .snake-game-over {
+            width: 400px;
+            margin-left: -200px;
+        }
+    }
+
+    footer .signature a {
+        border: none;
+    }
+}

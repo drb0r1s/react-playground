@@ -1,0 +1,300 @@
+.drawing {
+    @include flex-center(column, center);
+    min-height: 100vh;
+    background: $defDrawingBg;
+    border-bottom: 5px dashed white;
+
+    .download-modal {
+        @include flex-center(column, center);
+        height: 300px;
+        width: 500px;
+        background: white;
+        border: 3px dashed $defBlue;
+        border-radius: 20px;
+        box-shadow: $defShadow;
+        margin-top: -150px;
+        margin-left: -250px;
+        opacity: 0;
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transition: 500ms;
+        z-index: 50;
+        
+        img {
+            @include modal-x;
+            filter: contrast(1000%) invert(100%) sepia(100%) saturate(10000%) hue-rotate(75deg);
+
+            &:hover {
+                filter: contrast(1000%) invert(100%) sepia(100%) saturate(10000%) hue-rotate(100deg);
+            }
+        }
+        
+        h3 {
+            color: $defBlue;
+            font-size: set-size(xxl);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .download {
+            @include flex-center(column, center);
+            transition: 500ms;
+    
+            .input-holder {
+                @include flex-center;
+                
+                input {
+                    color: $defBlue;
+                    font-size: set-size(lg);
+                    background: white;
+                    border: 1px dashed $defGrey;
+                    border-radius: 5px;
+                    outline: none;
+                    position: relative;
+                    top: 0;
+                    margin: 10px 5px;
+                    padding: 5px 10px;
+                    transition: 300ms;
+        
+                    &:hover {
+                        background: $defGrey;
+                        border: 1px solid $defDarkGrey;
+                    }
+        
+                    &:focus {
+                        color: $defLightBlue;
+                        background: $defDarkGrey;
+                        border: 1px solid $defBlue;
+                        border-radius: 10px;
+                        top: -5px;
+                        box-shadow: $defShadow;
+                    }
+    
+                    &::placeholder {
+                        text-align: center;
+                    }
+                }
+            }
+    
+            #file-name {
+                width: 300px;
+            }
+    
+            #file-type {
+                width: 80px;
+            }
+    
+            a {
+                color: $defBlue;
+                font-size: set-size(md);
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                text-decoration: none;
+                background: white;
+                border: 1px dashed $defBlue;
+                position: relative;
+                top: 0;
+                margin: 10px;
+                padding: 3px 5px;
+                transition: 300ms;
+    
+                &:hover {
+                    color: white;
+                    background: $defBlue;
+                    border: 1px solid white;
+                    top: -5px;
+                    box-shadow: $defShadow;
+                }
+            }
+        }
+
+        .download-success {
+            @include flex-center(column, center);
+            opacity: 0;
+            position: relative;
+            top: -20px;
+            transition: 500ms;
+
+            strong {
+                color: $defDarkGrey;
+                font-size: set-size(lg);
+                
+                span {
+                    color: $defBlue;
+                }
+            }
+
+            p {
+                color: $defGrey;
+                font-size: set-size(sm);
+                margin: 10px 0;
+
+                a {
+                    color: $defBlue;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    margin-left: 5px;
+                    transition: 300ms;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    
+    h2 {
+        @include default-heading;
+        font-size: 70px;
+        letter-spacing: 20px;
+        text-shadow: 20px 20px 2px rgba(0,0,0,0.5);
+        cursor: default;
+        user-select: none;
+    }
+
+    #canvas {
+        background: rgba(255,255,255,0.5);
+        border: 15px double $defBlue;
+        box-shadow: $defShadow;
+        position: relative;
+        top: 0;
+        margin-top: 30px;
+        transition: 500ms;
+
+        &:hover {
+            box-shadow: $defStrongShadow;
+            top: -10px;
+        }
+    }
+
+    .dashboard {
+        @include flex-center;
+        flex-wrap: wrap;
+        width: 70vw;
+        background: white;
+        border: 10px double $defBlue;
+        box-shadow: $defShadow;
+        position: relative;
+        top: 0;
+        margin: 10px 0;
+        padding: 15px 10px;
+        transition: 300ms;
+
+        &:hover {
+            box-shadow: $defStrongShadow;
+            top: -5px;
+        }
+
+        .option {
+            @include flex-center;
+            margin: 0 5px;
+
+            label {
+                color: $defBlue;
+                font-size: set-size(sm);
+                text-transform: capitalize;
+            }
+
+            input {
+                color: $defBlue;
+                font-size: set-size(sm);
+                text-align: center;
+                background: transparent;
+                border: 1px solid transparent;
+                border-bottom: 1px solid $defBlue;
+                outline: none;
+                position: relative;
+                top: 0;
+                margin: 5px;
+                padding: 3px 5px;
+                transition: 300ms;
+
+                &[type="text"],
+                &[type="number"] {
+                    width: 100px;
+                }
+                
+                &:hover {
+                    border: 1px dashed $defLightBlue;
+                    top: -5px;
+                    box-shadow: $defLightShadow;
+                }
+
+                &:focus {
+                    border: 1px solid $defBlue;
+                    top: -5px;
+                    box-shadow: $defShadow;
+                }
+
+                &::placeholder {
+                    color: $defLightBlue;
+                    text-align: center;
+                }
+            }
+
+            select {
+                color: $defBlue;
+                font-size: set-size(sm);
+                text-align: center;
+                text-transform: capitalize;
+                background: transparent;
+                border: 1px solid transparent;
+                border-bottom: 1px solid $defBlue;
+                outline: none;
+                position: relative;
+                top: 0;
+                margin: 5px;
+                padding: 3px 5px;
+                transition: 300ms;
+
+                &:hover {
+                    border: 1px dashed $defLightBlue;
+                    top: -5px;
+                    box-shadow: $defLightShadow;
+                }
+
+                &:focus {
+                    border: 1px solid $defBlue;
+                    top: -5px;
+                    box-shadow: $defShadow;
+                }
+
+                option {
+                    text-transform: uppercase;
+                    text-align: center;
+                    transition: 300ms;
+                }
+            }
+        }
+
+        button {
+            color: $defBlue;
+            font-size: set-size(sm);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: transparent;
+            border: 1px solid $defBlue;
+            cursor: pointer;
+            position: relative;
+            top: 0;
+            margin: 0 5px;
+            padding: 3px 5px;
+            transition: 300ms;
+
+            &:hover {
+                color: white;
+                background: $defBlue;
+                border: 1px solid white;
+                top: -5px;
+                box-shadow: $defShadow;
+            }
+        }
+    }
+}
+
+#return-shadow {
+    text-shadow: 20px 20px 2px rgba(0,0,0,0.5) !important;
+    transition: 300ms;
+}

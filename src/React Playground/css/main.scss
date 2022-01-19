@@ -1,0 +1,195 @@
+@font-face {
+    font-family: defFont;
+    src: url("../fonts/SplineSans-Regular.ttf");
+}
+
+$defGrey: #a3a29e;
+$defDarkGrey: #2e2f30;
+$defLightBlue: #73a9ff;
+$defBlue: #4287f5;
+$defGreen: #3b991f;
+$defLightGreen: #55b538;
+$defRed: #c91a0e;
+$defLightRed: #eb4034;
+$defYellow: #fcba03;
+$defLightYellow:#eded24;
+$defLightWhite: #ebe5dd;
+$defWhite: #a3a19e;
+$defLime: #bfff00;
+$defLightLime: #80ff00;
+$defNumberBg: linear-gradient(45deg, $defLightGreen 40%, $defGreen 60%);
+$defDiceBg: linear-gradient(120deg, $defLightRed 40%, $defRed 60%);
+$defTypingBg: linear-gradient(45deg, $defLightYellow 40%, $defYellow 60%);
+$defDrawingBg: linear-gradient(45deg, $defLightBlue 40%, $defBlue 60%);
+$defDinoBg: linear-gradient(120deg, $defLightWhite 40%, $defWhite 60%);
+$defSnakeBg: linear-gradient(120deg, $defLightLime 40%, $defLime 60%);
+$defLightShadow: 0px 3px 15px 3px rgba(0,0,0,0.3);
+$defShadow: 0px 3px 15px 3px rgba(0,0,0,0.5);
+$defStrongShadow: 0px 3px 15px 3px rgba(0,0,0,0.7);
+$defDropShadow: drop-shadow(5px 10px 12px #000000);
+$defDropLightShadow: drop-shadow(5px 10px 12px #ffffff);
+$defWhiteShadow: 0px 3px 15px 3px rgba(255,255,255,0.5);
+$defStrongWhiteShadow: 0px 3px 15px 3px rgba(255,255,255,0.7);
+$defSpecialWhiteShadow: 10px 10px 15px 5px rgba(255,255,255,0.5);
+$defStrongSpecialWhiteShadow: 10px 10px 15px 5px rgba(255,255,255,0.7);
+$defLimeNeonShadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+$default-font-size: (
+    "xs": 10px,
+    "sm": 15px,
+    "md": 20px,
+    "lg": 25px,
+    "xl": 30px,
+    "xxl": 35px,
+    "xxxl": 45px
+);
+
+@function set-size($size) {
+    @return map-get($default-font-size, $size);
+}
+
+@mixin flex-center($direction: row, $spacing: center) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: $spacing;
+}
+
+@mixin default-heading {
+    color: white;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+@mixin warning-msg {
+    color: white;
+    font-size: set-size(sm);
+    text-align: center;
+    letter-spacing: 3px;
+    font-style: italic;
+    opacity: 0;
+    position: relative;
+    top: 20px;
+    transition: 500ms;
+}
+
+@mixin modal-x {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    filter: contrast(1000%) invert(100%) sepia(100%) saturate(10000%) hue-rotate(290deg);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: 300ms;
+
+    &:hover {
+        height: 60px;
+        width: 60px;
+        filter: contrast(1000%) invert(100%) sepia(100%) saturate(10000%) hue-rotate(300deg);
+        transform: rotate(180deg);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: defFont;
+}
+
+.responsive-menu {
+    @include flex-center(column, center);
+    height: 100vh;
+    width: 50vw;
+    background: white;
+    margin-left: -50vw;
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    z-index: 90;
+    transition: 300ms;
+
+    a {
+        @include flex-center;
+        text-decoration: none;
+        
+        img {
+            height: 75px;
+            width: auto;
+            position: relative;
+            left: 0;
+            transition: 300ms;
+        }
+
+        &:hover img {
+            left: 30px;
+            transform: rotate(180deg);
+            opacity: 0.5;
+        }
+
+        p {
+            color: $defDarkGrey;
+            font-size: set-size(lg);
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 3px;
+            position: relative;
+            left: 0;
+            margin: 0;
+            transition: 300ms;
+        }
+
+        &:hover p {
+            left: -10px;
+            text-shadow: 3px 1px 2px rgba(0,0,0,0.5);
+        }
+    }
+    
+    nav {
+        @include flex-center(column, space-between);
+        height: 40vh;
+        margin: 20px 0;
+
+        a {
+            color: $defDarkGrey;
+            font-size: set-size(lg);
+            text-transform: capitalize;
+            text-decoration: none;
+            position: relative;
+            top: 0;
+            transition: 300ms;
+
+            &:hover {
+                color: black;
+                top: -5px;
+                text-shadow: 3px 3px 2px rgba(0,153,255,0.8);
+            }
+        }
+    }
+}
+
+#active-responsive-menu {
+    opacity: 1;
+    left: 50%;
+    box-shadow: $defShadow;
+}
+
+@import "./sections/loading";
+@import "./sections/header";
+@import "./sections/home";
+@import "./sections//number";
+@import "./sections/dice";
+@import "./sections/typing";
+@import "./sections/drawing";
+@import "./sections/dino";
+@import "./sections/snake";
+@import "./sections/footer";
+
+@import "./responsive/responsive319";
+@import "./responsive/responsive320";
+@import "./responsive/responsive481";
+@import "./responsive/responsive769";
+@import "./responsive/responsive1025";
+@import "./responsive/responsive1201";
+@import "./responsive/responsive1700";

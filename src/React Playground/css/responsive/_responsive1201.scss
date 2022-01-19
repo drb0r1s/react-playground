@@ -1,0 +1,43 @@
+@media screen and (min-width: 1201px) and (max-width: 1699px) {
+    .number {
+        h2 {
+            font-size: 80px;
+        }
+
+        .number-set {
+            form {
+                input {
+                    width: 250px;
+                    font-size: 35px;
+                }
+
+                button {
+                    font-size: 30px;
+                }
+            }
+
+            .warning-msg {
+                font-size: 25px;
+            }
+        }
+
+        .number-guess {
+            form {
+                input {
+                    width: 300px;
+                    font-size: 40px;
+                }
+
+                button {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    .typing {
+        p {
+            font-size: 25px;
+        }
+    }
+}

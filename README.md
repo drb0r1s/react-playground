@@ -2,7 +2,7 @@
 
 - **React Playground** is a website made using *React Functional Components*, consisting of *6 different games*.
 
-- List of *games*:
+List of *games*:
 - *Guess The Number*,
 - *Dice*,
 - *Typing Speed Test*,
